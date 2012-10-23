@@ -26,6 +26,7 @@ class DBcon {
 		    String username = "seb";
 		    String password = "password";
 		    con = DriverManager.getConnection(url, username, password);
+		    /*
 		    Statement st = con.createStatement();
 			ResultSet rs = st.executeQuery("select * from test2");
 			
@@ -35,7 +36,7 @@ class DBcon {
 			}
 			rs.close();
 			st.close();
-			
+			*/
 			//con.close();
 		}
 		catch (ClassNotFoundException e)
