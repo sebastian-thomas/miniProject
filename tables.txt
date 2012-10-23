@@ -1,5 +1,5 @@
 
-Database :`billing`
+Database :`XE`
 
 CREATE TABLE product (
 pid NUMBER(4) PRIMARY KEY,
@@ -8,14 +8,16 @@ price NUMBER(5,2) ,
 stock NUMBER(4) 
 );
 
+
+
 CREATE TABLE bill(
   billno NUMBER(4) PRIMARY KEY ,
   customer VARCHAR2(30) ,
-  date DATETIME ,
+  datep DATE ,
   total NUMBER(5,2)
   );
   
 CREATE TABLE billproducts (
-  billno NUMBER(4) REFERENCES (bill.billno) ,
-  pid NUMBER(4) REFERENCES (product.pid)
+  billno NUMBER(4) REFERENCES bill(billno) ,
+  pid NUMBER(4) REFERENCES product(pid)
   );
