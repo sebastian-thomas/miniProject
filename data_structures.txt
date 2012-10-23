@@ -1,0 +1,17 @@
+
+Product
+  pid    :Primary Key
+  pname
+  price
+  stock
+  
+Bill
+  billno    :Primary Key
+  customer
+  date
+  total
+  
+BillProducts
+  billno
+  pid
+  
