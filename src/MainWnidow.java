@@ -41,6 +41,17 @@ class MainWindow extends JFrame
 
 			}
 		});
+		viewproducts.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent event)
+			{
+				//panel.removeAll();
+				Product p = new Product();
+				panel1 = p.viewProducts();
+				changePanel(panel1);
+
+			}
+		});
 		
 		product.add(addproduct);
 		product.add(viewproducts);
